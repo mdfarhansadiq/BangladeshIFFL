@@ -1,0 +1,140 @@
+<div class="container" class="pt-3 pb-3">
+    <div class="row m-b-lg animated fadeInDown delayp1 text-center">
+        <h3> {{ $pageTitle }} <small> {{ $pageNote }} </small></h3>
+        <hr />       
+    </div>
+</div>
+<div class="m-t">
+	<div class="table-container" > 	
+
+		<table class="table table-striped table-bordered" >
+			<tbody>	
+		
+			
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Id', (isset($fields['id']['language'])? $fields['id']['language'] : array())) }}</td>
+						<td>{{ $row->id}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('About Biffl', (isset($fields['about_biffl']['language'])? $fields['about_biffl']['language'] : array())) }}</td>
+						<td>{{ $row->about_biffl}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('About Image', (isset($fields['about_image']['language'])? $fields['about_image']['language'] : array())) }}</td>
+						<td>{{ $row->about_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Background', (isset($fields['background']['language'])? $fields['background']['language'] : array())) }}</td>
+						<td>{{ $row->background}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Background Image', (isset($fields['background_image']['language'])? $fields['background_image']['language'] : array())) }}</td>
+						<td>{{ $row->background_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Vission', (isset($fields['vission']['language'])? $fields['vission']['language'] : array())) }}</td>
+						<td>{{ $row->vission}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Vission Image', (isset($fields['vission_image']['language'])? $fields['vission_image']['language'] : array())) }}</td>
+						<td>{{ $row->vission_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Mission', (isset($fields['mission']['language'])? $fields['mission']['language'] : array())) }}</td>
+						<td>{{ $row->mission}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Mission Image', (isset($fields['mission_image']['language'])? $fields['mission_image']['language'] : array())) }}</td>
+						<td>{{ $row->mission_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Goal', (isset($fields['goal']['language'])? $fields['goal']['language'] : array())) }}</td>
+						<td>{{ $row->goal}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Goal Image', (isset($fields['goal_image']['language'])? $fields['goal_image']['language'] : array())) }}</td>
+						<td>{{ $row->goal_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Objectives', (isset($fields['objectives']['language'])? $fields['objectives']['language'] : array())) }}</td>
+						<td>{{ $row->objectives}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Strategic', (isset($fields['strategic']['language'])? $fields['strategic']['language'] : array())) }}</td>
+						<td>{{ $row->strategic}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Strategic Image', (isset($fields['strategic_image']['language'])? $fields['strategic_image']['language'] : array())) }}</td>
+						<td>{{ $row->strategic_image}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Add Info1', (isset($fields['add_info1']['language'])? $fields['add_info1']['language'] : array())) }}</td>
+						<td>{{ $row->add_info1}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Add Info2', (isset($fields['add_info2']['language'])? $fields['add_info2']['language'] : array())) }}</td>
+						<td>{{ $row->add_info2}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Add Info3', (isset($fields['add_info3']['language'])? $fields['add_info3']['language'] : array())) }}</td>
+						<td>{{ $row->add_info3}} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Status', (isset($fields['status']['language'])? $fields['status']['language'] : array())) }}</td>
+						<td>{{ SiteHelpers::formatLookUp($row->status,'status','1:vmsl_status:id:name') }} </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>{{ SiteHelpers::activeLang('Updated At', (isset($fields['updated_at']['language'])? $fields['updated_at']['language'] : array())) }}</td>
+						<td>{{ $row->updated_at}} </td>
+						
+					</tr>
+						
+					<tr>
+						<td width='30%' class='label-view text-right'></td>
+						<td> <a href="javascript:history.go(-1)"> Back To Grid <a> </td>
+						
+					</tr>					
+				
+			</tbody>	
+		</table>   
+
+	 
+	
+	</div>
+</div>	

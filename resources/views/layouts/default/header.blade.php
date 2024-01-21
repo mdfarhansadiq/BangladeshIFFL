@@ -18,9 +18,10 @@
 
 
     <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"> --}}
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/images/bifflfavicon.png">
@@ -61,8 +62,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/css/custom.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/css/supperresponsive.css">
     <script src="{{ asset('frontend') }}/js/custom.js"></script>
-    
-    
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4EZLQTLBR"></script>
 <script>
@@ -71,10 +72,10 @@
   gtag('js', new Date());
 
   gtag('config', 'G-M4EZLQTLBR');
-</script> 
-    
-    
-    
+</script>
+
+
+
 </head>
 <body  class="defult-home">
 
@@ -82,7 +83,7 @@
 <div id="loader" class="loader">
     {{-- <div class="spinner"></div> --}}
     <img src="/uploads/images/loader.gif" alt="" style="width:100px;position: absolute;top: 50%;left: 50%;transform: translateX(-50%);">
-    
+
 </div>
 <!--End preloader here -->
 <script>
@@ -93,19 +94,19 @@
              func = null;
           }
         }
-        
-        
-        
+
+
+
         var x = 0;
-        
+
         var initializer= one( _ =>{
-                var x =+ 1; 
+                var x =+ 1;
               console.log('initializing'+x);
               localStorage.removeItem('supper_parent_id');
         });
         initializer();
     });
-    
+
 </script>
 
 

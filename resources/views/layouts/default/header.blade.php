@@ -83,7 +83,7 @@
 <!-- Preloader area start here -->
 <div id="loader" class="loader">
     {{-- <div class="spinner"></div> --}}
-    <img class="lazy" data-original="/uploads/images/loader.gif" alt="" style="width:100px;position: absolute;top: 50%;left: 50%;transform: translateX(-50%);">
+    <img src="/uploads/images/loader.gif" alt="" style="width:100px;position: absolute;top: 50%;left: 50%;transform: translateX(-50%);">
 
 </div>
 <!--End preloader here -->
@@ -111,7 +111,13 @@
 </script>
 <script>
     $(document).ready(function(){
-        $("img.lazy").lazyload();
+       $("img").each(function() {
+            var originalSrc = $(this).attr("src");
+            $(this).attr("data-original", originalSrc).removeAttr("src");
+        });
+
+        // Apply lazy loading to all images
+        $("img").lazyload();
     });
 </script>
 

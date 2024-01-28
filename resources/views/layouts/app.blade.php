@@ -85,6 +85,18 @@
 
         })
     </script>
+
+    <script>
+        $(document).ready(function() {
+            $("img").each(function() {
+                var originalSrc = $(this).attr("src");
+                $(this).attr("data-original", originalSrc).removeAttr("src");
+            });
+
+            // Apply lazy loading to all images
+            $("img").lazyload();
+        });
+    </script>
     {{ SiteHelpers::showNotification() }}
 </body>
 

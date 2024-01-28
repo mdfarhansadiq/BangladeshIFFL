@@ -61,6 +61,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/css/custom.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend') }}/css/supperresponsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script src="{{ asset('frontend') }}/js/custom.js"></script>
 
 
@@ -82,7 +83,7 @@
 <!-- Preloader area start here -->
 <div id="loader" class="loader">
     {{-- <div class="spinner"></div> --}}
-    <img src="/uploads/images/loader.gif" alt="" style="width:100px;position: absolute;top: 50%;left: 50%;transform: translateX(-50%);">
+    <img class="lazy" data-original="/uploads/images/loader.gif" alt="" style="width:100px;position: absolute;top: 50%;left: 50%;transform: translateX(-50%);">
 
 </div>
 <!--End preloader here -->
@@ -107,6 +108,11 @@
         initializer();
     });
 
+</script>
+<script>
+    $(document).ready(function(){
+        $("img.lazy").lazyload();
+    });
 </script>
 
 

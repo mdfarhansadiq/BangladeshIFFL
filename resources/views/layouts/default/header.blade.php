@@ -109,7 +109,7 @@
     });
 
 </script>
-<script>
+{{-- <script>
     $(document).ready(function(){
        $("img").each(function() {
             var originalSrc = $(this).attr("src");
@@ -119,7 +119,7 @@
         // Apply lazy loading to all images
         $("img").lazyload();
     });
-</script>
+</script> --}}
 
 
 @include('layouts.default.navigation_new')

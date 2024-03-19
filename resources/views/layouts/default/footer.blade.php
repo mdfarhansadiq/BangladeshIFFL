@@ -304,13 +304,29 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
  <script>
      $(document).ready(function() {
-         $("img").each(function() {
+        //  $("#nivoSlider img").each(function(i) {
+        //      alert(i);
+        //  });
+         //  $("img").each(function() {
+         //      var originalSrc = $(this).attr("src");
+         //      $(this).attr("data-original", originalSrc).removeAttr("src");
+         //  });
+
+         //  // Apply lazy loading to all images
+         //  $("img").lazyload();
+
+         $("img:not(#nivoSlider img)").each(function() {
              var originalSrc = $(this).attr("src");
              $(this).attr("data-original", originalSrc).removeAttr("src");
          });
 
+         // Exclude all images within .nivo-slice elements from lazy loading
+         $("#nivoSlider img").each(function() {
+             $(this).removeAttr("data-original");
+         });
+
          // Apply lazy loading to all images
-         $("img").lazyload();
+         $("img:not(#nivoSlider img)").lazyload();
      });
  </script>
  </body>
